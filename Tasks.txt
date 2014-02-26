@@ -1,0 +1,20 @@
+Environment
+========================
+* Login is currently off for testing.
+	* In dashboard.php
+
+Finished
+========================
+* Just finished collapsing and expanding panels based on if they have any errors
+* Finished checking name and description
+* Check for checkboxes, radios, etc
+
+Questions
+========================
+
+
+To-Do
+========================
+
+* Add proper HTTP response when user not logged in. in processForm.php
+*[Dashboard Landing] Fix the Welcome, <USER ID HERE>

@@ -1,0 +1,31 @@
+.createWrap {
+	position: relative;
+}
+
+#sortable {
+	margin: 0 0 0 0;
+}
+
+/* Defines what a dragable block looks like. */
+.formElem {
+	position: relative;
+	background: #FFFFFF;
+	cursor: move;
+}
+
+.formElem .desc {
+	position: absolute; top: 0; left: 0; right: 0; background: #F8F8F8; border-bottom: 1px solid #DADADA; padding: 3px 25px; font-weight: bold;
+}
+
+.formElem .req {
+	background: #FFDFDF !IMPORTANT; border-bottom: 1px solid #FFA6A8 !IMPORTANT;
+}
+
+.formElem .desc > span {
+	color: #E60005;
+}
+
+/* Elements in the formElem {element form} that DO NOT have the drag functionality*/
+.noDrag {
+	cursor: default;
+}

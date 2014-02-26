@@ -1,0 +1,12 @@
+
+// SQL For masterform
+
+CREATE TABLE IF NOT EXISTS `masterform` (
+  `DANA` varchar(10) NOT NULL,
+  `form_id` varchar(20) NOT NULL,
+  `created` int(10) NOT NULL,
+  `form_id_meta` varchar(20) NOT NULL,
+  `published` varchar(1) NOT NULL DEFAULT 'n',
+  `form_name` varchar(250) NOT NULL,
+  `form_description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

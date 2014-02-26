@@ -1,0 +1,73 @@
+body, html {
+	background: #fff url('../images/background.png');
+}
+
+.wrap {
+	max-width: 1000px; min-width: 800px; margin: 40px auto;
+}
+
+.mainFrame {
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,.1);
+	box-shadow:         0px 0px 3px 1px rgba(0,0,0,.1);
+	margin: 0 40px;
+	position: relative;
+}
+
+.mainFrame .leftSection {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 200px;
+	background: #52626B;
+	color: #fff;
+	text-align: right;
+}
+
+.leftSection .logo {
+	font-size: 28px;
+	background: #404D55;
+	text-align: right;
+	padding: 10px 15px;
+	width: 200px;
+}
+
+.leftSection .menu a{
+	color: #fff;
+	display: block;
+	padding: 15px;
+}
+
+.leftSection .menu {
+	width: 200px;
+}
+
+.leftSection .menu a:last-child{
+	background: #710003;
+	display: block;
+	padding: 15px;
+
+}
+
+.leftSection .menu a:hover{
+	background: #6E6E6E;
+	text-decoration: none;
+}
+
+.leftSection .menu .selected{
+	color: #6E6E6E !IMPORTANT;
+	display: block;
+	padding: 15px;
+	background: #fff !IMPORTANT;
+	cursor: default;
+}
+
+.mainFrame .rightSection {
+	min-height: 400px;
+	margin: 0 0 0 200px;
+}
+
+.mainFrame .body {
+	padding: 30px 25px; text-align: left;
+}

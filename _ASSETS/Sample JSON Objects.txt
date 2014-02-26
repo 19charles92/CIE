@@ -1,0 +1,3 @@
+Sample JSON Objects
+=========================================
+"{"0":{"element_type":"text_field","element_name":"Test","element_description":"Testing","element_required":"yes"},"1":{"element_type":"text_area","element_name":"Second Test ","element_description":"No","element_required":"no"},"2":{"element_type":"radio","element_name":"Few Options","element_description":"All of them","element_required":"yes","element_option":{"0":"one","1":"two","2":"three","3":"four"}},"3":{"element_type":"checkbox","element_name":"Just Checking?","element_description":"The Stuff","element_required":"no","element_option":{"0":"yes?"}}}"
