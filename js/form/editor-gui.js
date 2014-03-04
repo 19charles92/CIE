@@ -203,11 +203,10 @@ function saveForm(){
 		$("#modal_results_body").html("There was an error with your save request. As such, this form cannot be processed. Below is a copy of your current work.<br><br><div class=\"alert alert-danger\"><strong> Please save the information below to a document on your own computer. It cannot be saved to the database and the data will be lost once this page is reloaded. <br><br> Please speak to an administrator to resolve the issue.</strong></div><pre>"+dataExport()+"</pre>");
 		$("#modal_results_footer").html("<button type=\"button\" class=\"btn btn-default\" onclick=\"forceReload('Did you save the copy of your work?')\">Refresh This App</button>");
 	});
-	
 }
 
 function redirectToManage(goTo){
-	window.location.href = "?path=form/edit&id="+goTo;
+	window.location.href = "?path=form/view&id="+goTo;
 }
 
 // Forces the application to refresh if there is an error.

@@ -37,6 +37,7 @@ function site_queryCIE( $Query, $Bindings ){
 		// If the $Bindings variables is set to "query", then just run a straight query
 		if( $Bindings == "query" ){
 			$result = $link->query($Query);
+			$result = $result->fetchAll(PDO::FETCH_OBJ);
 		} else {
 
 			// $handle = $link->prepare('select dana from user_level where access_level = ?');

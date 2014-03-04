@@ -94,7 +94,7 @@ foreach ($forms as $form) {
 	?>
 		<tr>
 			<td><?php echo $form->DANA ?></td>
-			<td><a href="?path=form/edit&id=<?php echo $form->form_id ?>"><?php echo $form->form_name ?></a></td>
+			<td><a href="?path=form/view&id=<?php echo $form->form_id ?>"><?php echo $form->form_name ?></a></td>
 			<td><?php echo date("m/d/Y",$form->created) ?></td>
 			<td><?php echo $form->form_description ?></td>
 			<td><?php if( $form->published == "y" ){ echo "Yes"; } else { echo "No"; } ?></td>

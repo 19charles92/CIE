@@ -9,7 +9,7 @@ class Dashboard
 	// Format will append whatever is in this to:
 	// 		Dashboard - title()
 	function title(){
-		return ' Manage Forms';
+		return 'View Form';
 	}
 
 	// Returns the current location of the file
@@ -44,6 +44,12 @@ class Dashboard
 		$queryString = " SELECT * FROM ".$metaForm;
 		$formMetaInfo = site_queryCIE($queryString,[]);
 
+		// Check to see if this is a true result
+		if( !is_array($formMetaInfo) ){
+			echo '<div style="padding: 10px 20px;">No form selected. <br><a href="?path=form/manage">Go Back</a></div>';
+			return;
+		}
+
 		// Now let's build our object
 		$JSONObject = "{";
 		$tempCounter = 0;
@@ -59,7 +65,7 @@ class Dashboard
 			$JSONObject .= '"element_type":"'.$element->element_type.'",';
 
 			// Add element name
-			$JSONObject .= '"element_name":"'.$element->element_name.'",';
+			$JSONObject .= '"element_name":"'.ucwords(str_replace("_", " ", $element->element_name)).'",';
 
 			// Add element description
 			$JSONObject .= '"element_description":"'.$element->element_description.'",';
@@ -79,20 +85,26 @@ class Dashboard
 
 		$JSONObject = substr($JSONObject, 0,strlen($JSONObject)-1)."}";
 
+		// Information about the form
+		$queryString = "SELECT * FROM masterform WHERE form_id='".$formID."'";
+		$formInformation = site_queryCIE($queryString,"query");
+		$currentForm = $formInformation[0];
+
+		// We are going to save the start state of the JSON object so we can later compare it to see if the user has edited the form.
+		$startJSONState = $JSONObject;
+
 		?>
 
-<div class="body">
+<div class="body" style="position: relative;">
 
 <ol class="breadcrumb">
 	<li><a href="?path=form/index">Form Management</a></li>
 	<li><a href="?path=form/manage">Manage Forms</a></li>
+	<li><a href="?path=form/view&id=<?php echo $formID ?>">View Form: <?php echo $currentForm->form_name ?></a></li>
 	<li class="active">Edit Form</li>
 </ol>
 
-<h2>Edit A Form</h2>
-<p>
-	Edit your form down here.
-</p> 
+<h3>Now Editing: <strong><?php echo $currentForm->form_name ?></strong></h3>
 
 <div class="createWrap">
 
@@ -119,6 +131,7 @@ class Dashboard
 
 			<form id="review" class="navbar-form navbar-right">
 				<div class="btn-group">
+					<a href="?path=form/view&id=<?php echo $formID ?>" class="btn btn-default">Done Editing</a>
 					<button type="button" name="text_field" class="btn btn-success" onclick="reviewForm()">Save</button>
 				</div>
 			</form>
@@ -139,8 +152,8 @@ class Dashboard
 		<h2 class="modal-title">Review successful,</h2>
 	</div>
 	<div class="modal-body">
-		This form has been completed without any errors detected. Currently, <span class="text-warning">this form has not been saved.</span><br><br>
-		<strong>To save</strong>, press the button below. You will be able to preview this form once you save. You can manage existing forms from the dashboard by navigating to "Form Management" and clicking on the "Manage Existing Forms" button.<br><br>
+		This form has been completed without any errors detected.<br><br>
+		<strong>To save</strong>, press the button below.<br><br>
 		To <strong>continue editing</strong>, select the button below or close this dialog box. You can get back to this screen by clicking on "Review" in the controls section.
 	</div>
 	<div class="modal-footer">
@@ -167,27 +180,27 @@ class Dashboard
 <!-- This modal asks the user for additional information to submit a form -->
 <div id="modal_addInfo" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" style="display: none;">
 	<div class="modal-header">
-		<h2 class="modal-title">Additional Information Needed</h2>
+		<h2 class="modal-title">Update Info</h2>
 	</div>
 	<div class="modal-body">
 
 		<div id="addInfo_error" class="alert alert-danger" style="display: none;"></div>
 
-		Please fill out the following information.
+		Would you like to update either the form name or the form description?
 		<div class="form-group col-md-12" style="padding: 15px 0 0 0;"> 
 			<label for="form_name" class="control-label">Form Name</label> 
 			<br> 
-				<input type="text" class="form-control" id="form_name" placeholder="Ex: Online Application For..."> 
+				<input type="text" class="form-control" id="form_name" placeholder="Ex: Online Application For..." value="<?php echo $currentForm->form_name ?>"> 
 		</div>
 		<div class="form-group col-md-12" style="padding: 15px 0 0 0;"> 
 			<label class="control-label" for="form_description">Form Description</label> 
 			<br> 
-				<textarea type="text" class="form-control" id="form_description" placeholder="Ex: Application for CIE award of..."></textarea>
+				<textarea type="text" class="form-control" id="form_description" placeholder="Ex: Application for CIE award of..."><?php echo $currentForm->form_description ?></textarea>
 		</div>
 	</div>
 	<div class="modal-footer">
 		<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-		<button id="modal_saveFormButton" type="button" class="btn btn-success" onclick="addInfo(true)">Save Form (Does NOT publish on website)</button>
+		<button id="modal_saveFormButton" type="button" class="btn btn-success" onclick="saveForm()">Save Form (Does NOT publish on website)</button>
 	</div>
 
 </div>
@@ -206,7 +219,131 @@ class Dashboard
 
 <script src="./js/form/editor-gui.js"></script>
 <script type="text/javascript">
-	main('<?php echo $JSONObject; ?>')
+
+// Load after everything is done loading
+$( document ).ready( function(){ main('<?php echo $JSONObject; ?>');visual_collapse("hide") } )
+
+var startJSONState = '<?php echo $startJSONState ?>';
+var hasSubmitted = false;
+
+// Check to see if the user has edited anything before leaving...
+window.onbeforeunload = function(){
+	if( startJSONState == dataExport() ){
+		// They haven't changed anything, let them leave.
+	} else {
+		if( hasSubmitted ){
+
+		} else {
+			return "You have unsaved work. Do you wish to leave? (No work will be saved)"
+		}
+	}
+}
+
+
+// This function will override the usual save function. It sends an extra parameter to the processForm.php
+function saveForm(){
+		// If we are checking the form data for completion, then call addInfo(true)
+	var form_name = getElement("form_name");
+	var form_description = getElement("form_description");
+
+	// Pass Flag
+	var errors = ['',''];
+	var noErrors = true;
+
+	// Clear everything out!
+	$("#addInfo_error").html("");
+	$("#addInfo_error").hide();
+
+	// Check each value
+	if( form_name.value === "" ){
+		$("#form_name").parent().addClass("has-error");
+		errors[0] = "Please fill out the name field.";
+	} else {
+		$("#form_name").parent().removeClass("has-error");
+	}
+
+	if( form_description.value === "" ){
+		$("#form_description").parent().addClass("has-error");
+		errors[1] = "Please fill out the description field.";
+	} else {
+		$("#form_description").parent().removeClass("has-error");
+	}
+
+	// Add the errors if there are any...
+	for( var i = 0; i < errors.length; i++ ){
+		if( errors[i] === '' ){
+			continue;
+		} else {
+			noErrors = false;
+			$("#addInfo_error").append(errors[i]+"<br>");
+		}
+	}
+
+	// If there are no errors, submit the form
+	if( noErrors ){
+		updateForm()
+	} else {
+		// There are errors, show them!
+		$("#addInfo_error").show();
+	}
+}
+
+function updateForm(){
+
+	// Show loading status...
+	// In this case, we want to disable the old modal and put up a new one!
+	$("#modal_formReview").modal("loading");
+	$("#modal_saveFormButton").attr({
+		disabled: 'dsiabled'
+	});
+
+	// Now display the new modal.
+	$("#modal_saveForm").modal("show");
+
+
+	// Grab the state
+	var dataObj = dataExport();
+
+	// Also grab the form details
+	var form_name = getElement("form_name").value;
+	var form_description = getElement("form_description").value;
+
+	$.ajax({
+		url: '/CIE/component/form/processForm.php',
+		type: 'POST',
+		dataType: 'html',
+		data: {dataObject: dataObj,form_name: form_name, form_description: form_description,form_id:"<?php echo $formID ?>",update:"true"},
+	})
+	.done(function(response) {
+		// We're going to redirect them to the form manager that is open to the current form.
+		$("#modal_saveForm").modal("hide");
+		$("#modal_formReview").modal("hide");
+		$("#modal_addInfo").modal("hide");
+		$("#modal_results").modal("show");
+
+		$("#modal_results_title").html("<span class=\"text-success\">Form Saved</span>");
+		$("#modal_results_body").html("This form has been saved!<br>Press <strong>\"continue\"</strong> to view your form. ");
+		$("#modal_results_footer").html("<button type=\"button\" class=\"btn btn-primary\" onclick=\"window.location.href = '?path=form/edit&id="+response+"'\">Continue</button>");
+
+		// Also allow them to leave without a prompt.
+		hasSubmitted = true;
+		
+	})
+	.fail(function() {
+		// The form could not be saved.
+		// Alert User through result modal.
+		// Allow the user to save their work so they don't loose it!
+		$("#modal_saveForm").modal("hide");
+		$("#modal_formReview").modal("hide");
+		$("#modal_addInfo").modal("hide");
+		$("#modal_results").modal("show");
+		
+		$("#modal_results_title").html("<span class=\"text-danger\">Error</span>");
+		$("#modal_results_body").html("There was an error with your save request. As such, this form cannot be processed. Below is a copy of your current work.<br><br><div class=\"alert alert-danger\"><strong> Please save the information below to a document on your own computer. It cannot be saved to the database and the data will be lost once this page is reloaded. <br><br> Please speak to an administrator to resolve the issue.</strong></div><pre>"+dataExport()+"</pre>");
+		$("#modal_results_footer").html("<button type=\"button\" class=\"btn btn-default\" onclick=\"forceReload('Did you save the copy of your work?')\">Refresh This App</button>");
+	});
+}
+
 </script>
 		<?php 
 	}

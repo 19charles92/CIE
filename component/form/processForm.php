@@ -1,7 +1,16 @@
 <?php 
 
+// 
+// Charles Chavez
+// processForm.php
+// 
+
+// 
 // This file process the data that is provided by the form GUI. It will take in the JavaScript Object and create
 // two different tables in the database.
+// 
+// It will also update a form if the update parameter is set.
+// 
 
 // This is a standalone file. Cannot be included in other files.
 include "../../config.php";
@@ -25,10 +34,6 @@ if( isset($_POST['dataObject']) && isset($_POST["form_name"]) && isset($_POST["f
 	echo "<h1>411 Length Required</h1>Cannot Process Request";
 	die();
 }
-
-// =================================== DEBUG =================================== 
-// die();
-// =================================== DEBUG =================================== 
 
 // Let's check the form info and see if there is anything missing.
 if( trim($formName) == "" || trim($formDescription) == "" ){
@@ -100,6 +105,66 @@ if( $hitError ){
 // If we've made it this far, we should save the information the user has spent so much time making.
 // We will be creating two different tables. 1) Table that will store the data of users. 2) Table that will store the settings for the form table.
 
+// First we need to see if the request is to update the form instead of creating a new one.
+if( isset( $_POST['update'] ) ){
+	// It's set, so let's make sure it's toggled to true.
+	if( $_POST['update'] == "true" ){
+		// It is, so we need to set our update task to true.
+		// Also, we need to grab the id of the form that we're going update.
+		// If there isn't one provided, then return an error and halt the script's execution.
+		$updateTask = "true";
+		if( isset( $_POST['form_id'] ) ){
+			// There is a form id set!
+			$formToUpdate = $_POST['form_id'];
+		} else {
+			// There is no form provided, go ahead and kill the process.
+			header("HTTP/1.0 411 Length Required");
+			echo "<h1>411 Length Required</h1>Cannot Process Request";
+			die();
+		}
+	}
+} else {
+	$updateTask = "";
+}
+
+// If there is an update available, make sure the form exists
+// If it does exists, then drop both the current form AND the meta form
+if( $updateTask == "true" ){
+	// Let's check to see if the form exists
+	$updateTableCheck = site_queryCIE("SELECT * FROM masterform WHERE form_id=?",[$formToUpdate]);
+	if( is_string( $updateTableCheck ) ){
+		header("HTTP/1.0 400 Bad Request");
+		echo "<h1>400 Bad Request</h1>Cannot Process Request";
+		die();
+	} else {
+		// We did find a table
+		// First we need to make sure that the table isn't published. If it is, then kill the script here.
+		if( $updateTableCheck[0]->published == "y" ){
+			// Can't edit a published table
+			header("HTTP/1.0 400 Bad Request");
+			echo "<h1>400 Bad Request</h1>Cannot Process Request";
+			die();
+		} else {
+
+			if( $updateTableCheck[0]->DANA == $userObj->DANA ){
+				// Only the owner can edit a file
+				// Let's drop 'em!
+				$queryString = "DROP TABLE ".$formToUpdate.", ".$formToUpdate."_meta";
+				site_queryCIE($queryString,"query");
+
+				// We also have to drop the entry in the masterform
+				site_queryCIE("DELETE FROM masterform WHERE form_id=? ",[$formToUpdate]);
+			} else {
+				header("HTTP/1.0 403 Length Required");
+				echo "<h1>403 Forbidden</h1>Request does not contain the proper credentials.";
+				die();
+			}
+		}
+	}
+}
+
+
+
 // =========
 // ========= Create table for storage.
 // =========
@@ -123,6 +188,11 @@ if( empty( $latestFormID ) ){
 	$formTableName = "form_".$temp_latestName;
 }
 
+// But wait, if we're updating, just override the name we found with our current form selected.
+if( $updateTask == "true" ){
+	$formTableName = $formToUpdate;
+}
+
 // Now the new name is in $formTableName
 
 // =========
@@ -130,7 +200,7 @@ if( empty( $latestFormID ) ){
 // =========
 
 // Creates standard meta table.
-$formTableMetaSQL = "CREATE TABLE ".$formTableName."_meta ( element_name VARCHAR(250), element_type VARCHAR(250), element_description VARCHAR(250), element_required VARCHAR(250), element_options VARCHAR(10000) );";
+$formTableMetaSQL = "CREATE TABLE ".$formTableName."_meta ( element_id int NOT NULL AUTO_INCREMENT, element_name VARCHAR(250), element_type VARCHAR(250), element_description VARCHAR(250), element_required VARCHAR(250), element_options VARCHAR(10000), PRIMARY KEY (element_id) );";
 site_queryCIE($formTableMetaSQL,"query");
 
 // Setup the layout of the info table.
