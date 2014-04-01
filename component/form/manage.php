@@ -88,7 +88,7 @@ function users(){
 
 $toFind = users()->DANA;
 
-$forms = site_queryCIE("SELECT * FROM masterform WHERE DANA=?",[$toFind]);
+$forms = site_queryCIE("SELECT * FROM masterform WHERE DANA=? AND unlinked='n'",[$toFind]);
 
 foreach ($forms as $form) {
 	?>

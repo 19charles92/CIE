@@ -40,7 +40,7 @@ class Dashboard
 <div class="body">
 
 <ol class="breadcrumb">
-	<li class="active">User Access Management</li>
+	<li><a href="?path=user/index">User Access Management</a></li>
 </ol>
 
 <?php

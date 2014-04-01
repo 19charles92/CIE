@@ -55,22 +55,28 @@ class Dashboard
 		$formInformation = site_queryCIE($queryString,"query");
 		$currentForm = $formInformation[0];
 
+		if( $currentForm->unlinked == "y" ){
+			echo '<div style="padding: 10px 20px;">No form selected. <br><a href="?path=form/manage">Go Back</a></div>';
+			return;
+		}
+
 		// If the form is already published, then allow the user to see a "View Code" instead of "Publish Form"
 		// Also, change the "Delete Form" to "Unlink Form"
 
 		$formOptions = [];
 
 		// Assign a default button
-		$formOptions[0] = '<a href="?path=form/edit&id='.$formID.'?>" class="btn btn-success"> Edit Form </a>';
+		$formOptions[0] = '<a href="?path=form/edit&id='.$formID.'" class="btn btn-success"> Edit Form </a>';
 
 		if( $currentForm->published == "y" ){
 			// Form has been published
+			$formOptions[0] = '<a href="?path=form/edit&id='.$formID.'" class="btn btn-success" disabled="disabled"> Edit Form </a>';
 			$formOptions[1] = '<button class="btn btn-primary" onclick="viewCode()">View Code</button>';
-			$formOptions[2] = '<button class="btn btn-warning"> Unlink Form </button>';
+			$formOptions[2] = '<button class="btn btn-warning" onclick="deleteRequest(\'Unlink\')"> Unlink Form </button>';
 		} else {
 			// Form hasn't been published
 			$formOptions[1] = '<button class="btn btn-primary" onclick="publishForm()">Publish Form</button>';
-			$formOptions[2] = '<button class="btn btn-danger"> Delete Form </button>';
+			$formOptions[2] = '<button class="btn btn-danger" onclick="deleteRequest(\'Delete\')"> Delete Form </button>';
 		}
 
 		?>
@@ -172,6 +178,13 @@ if( $errorMsg == "10" ){
 
 <script type="text/javascript">
 
+$.fn.modal.defaults.spinner = $.fn.modalmanager.defaults.spinner = 
+    '<div class="loading-spinner" style="width: 200px; margin-left: -100px;">' +
+        '<div class="progress progress-striped active">' +
+            '<div class="progress-bar" style="width: 100%;"></div>' +
+        '</div>' +
+    '</div>';
+
 // This function resets
 function resetResultModal(){
 	var modalTitle = document.getElementById("modal_results_title");
@@ -212,7 +225,7 @@ function showHTMLPreview(){
 		$("#modal_results").modal("show");
 
 		modalTitle.innerHTML = "<span class=\"text-success\">Preview</span>";
-		modalBody.innerHTML = response;
+		modalBody.innerHTML = '<div style="height: 350px; overflow-y: scroll;">'+response+'</div>';
 		modalFooter.innerHTML = '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>';
 	})
 	.fail(function() {
@@ -228,7 +241,7 @@ function showHTMLPreview(){
 // Publishes this form
 function publishForm(){
 	// First ask the user if they want to publish the form.
-	ifPublish = confirm("Once you publish a form, you cannot go back. You will also lose the ability to delete this form. \n\nHit 'OK' to publish form. ");
+	ifPublish = confirm("Once you publish a form, you cannot go back. You will also lose the ability to edit and delete this form. \n\nHit 'OK' to publish form. ");
 
 	if( ifPublish ){
 		// They have decided to publish. Call the AJAX request.
@@ -264,7 +277,63 @@ function viewCode(){
 	modalFooter.innerHTML = '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>';
 
 	$("#modal_results").modal("show");
+}
 
+// This function will prompt the user to ask if they want to proceed with their delete request
+function deleteRequest( keyword ){
+	// We first want to reset out results modal.
+	resetResultModal();
+
+	// Now setup the edit variables
+	var modalTitle = document.getElementById("modal_results_title");
+	var modalBody = document.getElementById("modal_results_body");
+	var modalFooter = document.getElementById("modal_results_footer");
+
+	// Write the text
+	modalTitle.innerHTML = "<span class='text-danger'>"+keyword+" Form</span>";
+	modalBody.innerHTML = "Are you sure you want to "+keyword+" this form? Once you confirm, this action <strong>cannot</strong> be undone. All data associated with this form will be deleted.";
+	modalFooter.innerHTML = '<button type="button" class="btn btn-success" data-dismiss="modal">Go Back</button> <button type="button" class="btn btn-danger" onclick="sendDeleteRequest()">'+keyword+'</button>';
+
+	$("#modal_results").modal("show");
+
+}
+
+function sendDeleteRequest(){
+
+	// Make the results modal load
+	$("#modal_results").modal("loading")
+
+	// Now setup the edit variables
+	var modalTitle = document.getElementById("modal_results_title");
+	var modalBody = document.getElementById("modal_results_body");
+	var modalFooter = document.getElementById("modal_results_footer");
+
+	$.ajax({
+		url: '/CIE/component/form/deleteForm.php',
+		type: 'POST',
+		dataType: 'HTML',
+		data: {formID: '<?PHP echo $formID ?>'},
+	})
+	.done(function() {
+		// The form was successfully deleted.
+		modalTitle.innerHTML = "Action successfully performed"
+		modalBody.innerHTML = "This form has now been removed. Please hit okay to go to the manage page."
+		modalFooter.innerHTML = '<a href="?path=form/manage" class="btn btn-default">Okay</a>'
+
+		// Now stop loading the modal
+		$("#modal_results").modal("loading")
+
+	})
+	.fail(function() {
+		// The form was successfully deleted.
+		modalTitle.innerHTML = '<span class="text-danger">Action could not be performed</span>'
+		modalBody.innerHTML = "Could not remove form. This could be because your account lacks the permission to perform this action. Press okay to be redirected back to the manage page."
+		modalFooter.innerHTML = '<a href="?path=form/manage" class="btn btn-default">Okay</a>'
+
+		// Now stop loading the modal
+		$("#modal_results").modal("loading")
+	});
+	
 }
 
 </script>

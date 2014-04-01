@@ -2,6 +2,8 @@
 ## Eclipse
 #################
 
+_ASSETS/
+
 *.pydevproject
 .project
 .metadata

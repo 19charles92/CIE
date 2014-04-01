@@ -31,7 +31,7 @@ if( isset($_POST['formID']) ){
 }
 
 // Now we have to make sure the owner is the only one editing this information.
-$accessForm = site_queryCIE("SELECT * FROM masterform WHERE form_id=? AND DANA=? ",[$formID,$userObj->DANA]);
+$accessForm = site_queryCIE("SELECT * FROM masterform WHERE form_id=? AND DANA=? AND unlinked='n' ",[$formID,$userObj->DANA]);
 
 if( empty($accessForm) ){
 	header("HTTP/1.0 403 Length Required");

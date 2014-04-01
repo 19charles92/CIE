@@ -50,6 +50,16 @@ class Dashboard
 			return;
 		}
 
+		// Unlinked Check
+		$queryString = "SELECT * FROM masterform WHERE form_id='".$formID."'";
+		$formInformation = site_queryCIE($queryString,"query");
+		$currentForm = $formInformation[0];
+		if( $currentForm->unlinked == "y" ){
+			echo '<div style="padding: 10px 20px;">No form selected. <br><a href="?path=form/manage">Go Back</a></div>';
+			return;
+		}
+		unset($formInformation,$currentForm);
+
 		// Now let's build our object
 		$JSONObject = "{";
 		$tempCounter = 0;

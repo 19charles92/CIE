@@ -33,7 +33,7 @@ class Dashboard
 <div class="body">
 
 <ol class="breadcrumb">
-	<li class="active">Form Management</li>
+	<li><a href="?path=form/index">Form Management</a></li>
 </ol>
 
 <h1>Create and Manage Forms</h1>

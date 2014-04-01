@@ -18,7 +18,7 @@ include "../../config.php";
 $userObj = hasAccess();
 
 if( $userObj->access_level == -1 ){
-	header("HTTP/1.0 403 Length Required");
+	header("HTTP/1.0 403 Forbidden");
 	echo "<h1>403 Forbidden</h1>Request does not contain the proper credentials.";
 	die();
 }
@@ -155,7 +155,7 @@ if( $updateTask == "true" ){
 				// We also have to drop the entry in the masterform
 				site_queryCIE("DELETE FROM masterform WHERE form_id=? ",[$formToUpdate]);
 			} else {
-				header("HTTP/1.0 403 Length Required");
+				header("HTTP/1.0 403 Forbidden");
 				echo "<h1>403 Forbidden</h1>Request does not contain the proper credentials.";
 				die();
 			}
