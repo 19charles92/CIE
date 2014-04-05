@@ -66,8 +66,16 @@ class Dashboard
 <h3>Now Viewing: <?php echo $masterForm->form_name ?></h3>
 <p>
 	This is the information that is currently in the selected form.
-</p> 
-<a href="?path=data/index" class="btn btn-default">Go Back</a><br><br>
+</p>
+
+<div>
+	<a href="?path=data/index" class="pull-left btn btn-default">Go Back</a>
+	<a href="./Excel/downloadExcelCopy.php?form=<?php echo str_replace("form_","",$formID) ?>" class="pull-right btn btn-success">Download as Excel File</a>
+</div>
+<br>
+<br>
+<br>
+
 <table id="currentForms" class="table tablesorter table-striped">
 	<thead>
 		<tr>
