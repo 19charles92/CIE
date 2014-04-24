@@ -21,6 +21,74 @@ if( isset( $_GET['iframe'] ) ){
 	}
 }
 
+// ======== Link the form request to the form in the database
+// Let's select the form we need.
+$selectedForm = "";
+
+if( isset($_GET['form']) ){
+	// Assign the selected form to our variable.
+	$selectedForm = trim($_GET['form']);
+} else {
+	// No form was provided...
+	header("HTTP/1.0 411 Length Required");
+	echo "<h1>411 Length Required</h1>Cannot Process Request";
+	die();
+}
+
+// Now, let's query the database for this form...
+$formData = site_queryCIE("SELECT * FROM ".$selectedForm."_meta","query");
+
+if( is_string($formData) ){
+	// No table found...
+	header("HTTP/1.0 411 Length Required");
+	echo "<h1>411 Length Required</h1>Cannot Process Request";
+	die();
+}
+
+// ======== If this form is restricted, then check to see if the user is logged in through the CAS system.
+// Query the masterform to see if the current form has a "restricted field."
+$restrictedCheck = site_queryCIE("SELECT restriction FROM masterform WHERE form_id=?",[$selectedForm]);
+$restrictedCheck = $restrictedCheck[0]->restriction;
+
+// Also, to ensure that a user is aware that they are filling out a form through a specific DANA, we are going to show the DANA they are under.
+$danaAlert = "";
+$authentication_dana = "";
+
+// If the restriction is not null, then force the user to login.
+// Skip this step if the iframe option is set to false
+if( !empty($restrictedCheck) && $iframe == "true" ){
+	// In here, check to see if the user is logged in.
+	if( isset( $_SESSION["guest_session"] ) ){
+		// They have a session, so check to see if that session is valid
+		$checkSession = site_queryCIE("SELECT DANA, expires FROM guest_session WHERE session_id=?",[$_SESSION['guest_session']]);
+
+		if( empty($checkSession) ){
+			// If the session id does not return a blank DANA, then the user cannot view this form.
+			?>
+			<h2>This form requires you to sign in through the CAS system.</h2>
+			<a href="#" onclick="window.open('http://cas-test.nau.edu/cas/login?service=http://localhost/CIE/component/form/processGuest.php?form=<?php echo $selectedForm ?>','_blank','menubar=no,titlebar=no,status=no,toolbar=no')">Sign in here.</a>
+			<?php
+			die();
+		} else {
+			$sessionExpires = $checkSession[0]->expires;
+			$authentication_dana = $checkSession[0]->DANA;
+			// Save the user's DANA so it can be used later...
+			// Tell the user what DANA they are logged in under.
+			$danaAlert = "You are currently accessing a form that requires authentication. Your are filling out this form under <strong>".$authentication_dana."</strong>. If this is not your DANA, please close your browser and navigate back to this page. <br><br> There is a 2 hour limit on your session. Please complete this form before <strong>".date("F jS \a\t g:ia",$sessionExpires)."</strong>";
+		}
+	} else {
+		// They're not logged in. Show them a link that will log them in through the CAS system and prevent them from viewing the rest of the form.
+		?>
+		<h2>This form requires you to sign in through the CAS system.</h2>
+		<a href="#" onclick="window.open('http://cas-test.nau.edu/cas/login?service=http://localhost/CIE/component/form/processGuest.php?form=<?php echo $selectedForm ?>','_blank','menubar=no,titlebar=no,status=no,toolbar=no')">Sign in here.</a>
+		<?php
+		die();
+	}
+}
+
+// ======== Also, we are going to clean up the guest_session database by purging any sessions.
+site_queryCIE("DELETE FROM guest_session WHERE expires<=? ",[time()]);
+
 // If the iframe is requested, then show the headers
 if( $iframe == "true" ){
 
@@ -50,29 +118,6 @@ if( $iframe == "true" ){
 
 }
 
-// Now, let's select the form we need.
-$selectedForm = "";
-
-if( isset($_GET['form']) ){
-	// Assign the selected form to our variable.
-	$selectedForm = trim($_GET['form']);
-} else {
-	// No form was provided...
-	header("HTTP/1.0 411 Length Required");
-	echo "<h1>411 Length Required</h1>Cannot Process Request";
-	die();
-}
-
-// Now, let's query the database for this form...
-$formData = site_queryCIE("SELECT * FROM ".$selectedForm."_meta","query");
-
-if( is_string($formData) ){
-	// No table found...
-	header("HTTP/1.0 411 Length Required");
-	echo "<h1>411 Length Required</h1>Cannot Process Request";
-	die();
-}
-
 // Unlinked Check
 $queryString = "SELECT * FROM masterform WHERE form_id='".$selectedForm."'";
 $formInformation = site_queryCIE($queryString,"query");
@@ -90,10 +135,19 @@ $formInfo = site_queryCIE("SELECT form_description FROM masterform WHERE form_id
 
 // Let's output the form info...
 ?>
-
-<p> <?php echo $formInfo[0]->form_description ?> </p>
+<p>
+	<?php echo $formInfo[0]->form_description ?>
+</p>
 
 <div style="padding: 0 20px;">
+
+<?php
+// Show information if this form is requires authentication
+if( !empty($danaAlert) ){
+	echo '<div class="alert alert-warning">'.$danaAlert.'</div>';
+}
+?>
+
 <?php
 
 echo '<div id="errorContainer" class="alert alert-danger hidden"> Sorry, please fill out all the required forms. </div>';
@@ -183,7 +237,11 @@ foreach ($formData as $elementForm ) {
 </div>
 
 <div class="form-group">
-	<div class="col-xs-offset-3 col-sm-9"><input class="btn btn-success" type="submit" value="submit"></div>
+<?php
+	if($iframe == "true"){
+		?><div class="col-xs-offset-3 col-sm-9"><input class="btn btn-success" type="submit" value="submit"></div><?php
+	}
+?>
 </div>
 
 </form>

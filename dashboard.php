@@ -87,7 +87,6 @@ $Dashboard = new Dashboard();
 		</div>
 
 	</div>
-
 	<script type="text/javascript">
 		function updateMenu( menuItem ){
 			document.getElementById(menuItem).className = "selected";

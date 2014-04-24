@@ -70,7 +70,7 @@ class Dashboard
 
 		if( $currentForm->published == "y" ){
 			// Form has been published
-			$formOptions[0] = '<a href="?path=form/edit&id='.$formID.'" class="btn btn-success" disabled="disabled"> Edit Form </a>';
+			$formOptions[0] = '<a href="#" class="btn btn-success" disabled="disabled"> Edit Form </a>';
 			$formOptions[1] = '<button class="btn btn-primary" onclick="viewCode()">View Code</button>';
 			$formOptions[2] = '<button class="btn btn-warning" onclick="deleteRequest(\'Unlink\')"> Unlink Form </button>';
 		} else {
@@ -164,6 +164,19 @@ if( $errorMsg == "10" ){
 	</div>
 </div>
 
+<div class="panel panel-default">
+	<div class="panel-heading">Form Access</div>
+	<div class="panel-body">
+		<p>
+			You can force this form to only be accessible by the users you specify.<br><br>
+			To enable this feature, just hit "enable" below. This feature can only be enabled <span style="font-weight: bold;">BEFORE</span> a form is published. <br><br>
+			Once enabled, you will always be able to change the access of the form. This includes adding and removing DANAs to the allowed list.<br><br>
+			Enabling this feature will prompt users to sign in through CAS before being allowed to view the form. The user's DANA ID will then be associated with their individual submission.
+			</p>
+		<button class="btn btn-success" onclick="enableFormAccess()"> Enable </button>
+	</div>
+</div>
+
 <div id="modal_results" class=" modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" style="display: none;">
 	<div class="modal-header">
 		<h2 class="modal-title" id="modal_results_title"></h2>
@@ -199,6 +212,8 @@ function resetResultModal(){
 	$("#modal_results").removeClass('container');
 
 }
+
+// This function will display a prompt for the user to enable 
 
 // Will show the HTML preview of the current form in the results modal.
 function showHTMLPreview(){

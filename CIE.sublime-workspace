@@ -4,287 +4,758 @@
 		"selected_items":
 		[
 			[
-				"HTML",
-				"html"
-			],
-			[
-				"getEle",
-				"getElementsByClassName"
-			],
-			[
-				"eleme",
-				"elementError"
-			],
-			[
-				"elemen",
-				"elementsInfo"
-			],
-			[
-				"class",
-				"className"
-			],
-			[
-				"getElement",
-				"getElementById"
-			],
-			[
-				"getE",
-				"getElementById"
-			],
-			[
-				"element",
-				"elementID"
-			],
-			[
-				"addEe",
-				"addElementOption"
-			],
-			[
-				"p",
-				"push  (function)"
-			],
-			[
-				"if",
-				"if	if"
-			],
-			[
-				"lst",
-				"listOfElements"
-			],
-			[
-				"check",
-				"checkbox"
-			],
-			[
-				"visual",
-				"visual_updateTitle"
-			],
-			[
-				"elements",
-				"listOfElements"
-			],
-			[
-				"f",
-				"function  (keyword)"
-			],
-			[
-				"_",
-				"_collapse"
-			],
-			[
-				"CIE",
-				"CIE-dash	CIE-dashboard"
-			],
-			[
-				"func",
-				"function  (keyword)"
-			],
-			[
-				"path",
-				"pathToLoad"
-			],
-			[
-				"onl",
-				"onclick	Attr"
-			],
-			[
-				"text",
-				"text-decoration"
-			],
-			[
-				"inl",
-				"inline-block"
-			],
-			[
-				"sty",
-				"stylesheet"
-			],
-			[
-				"session_d",
-				"session_id"
-			],
-			[
-				"cie",
-				"CIE_session"
-			],
-			[
-				"has",
-				"hasAccess"
-			],
-			[
-				"logi",
-				"loginURL"
-			],
-			[
-				"tic",
-				"ticket"
-			],
-			[
-				"ticket",
-				"ticketParm"
-			],
-			[
-				"create",
-				"createSession"
-			],
-			[
-				"new",
-				"newSessionID"
-			],
-			[
-				"DANA",
-				"DANACheck  (variable)"
+				"req",
+				"requestForm  (variable)"
 			],
 			[
 				"for",
 				"for	for …"
 			],
 			[
-				"ser",
-				"serviceResponse"
+				"reqes",
+				"requestForm"
 			],
 			[
-				"strrep",
-				"str_replace"
+				"request",
+				"requestForm"
 			],
 			[
-				"formEleme",
-				"formElement"
+				"form",
+				"form_id"
 			],
 			[
-				"L",
-				"Log"
+				"resti",
+				"restricted"
 			],
 			[
-				"re",
-				"requiredOption2_"
+				"restrc",
+				"restriction"
+			],
+			[
+				"formC",
+				"formCurrentStatus  (variable)"
+			],
+			[
+				"restri",
+				"restriction"
+			],
+			[
+				"reques",
+				"requestForm"
+			],
+			[
+				"publ",
+				"publishedStatus"
+			],
+			[
+				"authen",
+				"authentication_dana"
+			],
+			[
+				"chec",
+				"checkSession"
+			],
+			[
+				"res",
+				"restrictedCheck  (variable)"
+			],
+			[
+				"isN",
+				"is_null"
+			],
+			[
+				"is_n",
+				"is_null"
+			],
+			[
+				"isn",
+				"is_null"
+			],
+			[
+				"session",
+				"session_start"
+			],
+			[
+				"master",
+				"masterForm"
+			],
+			[
+				"eleme",
+				"element_"
+			],
+			[
+				"selec",
+				"selectedForm"
+			],
+			[
+				"requi",
+				"requiredCheck  (variable)"
 			],
 			[
 				"require",
-				"requiredOption1_"
+				"requiredRadio"
+			],
+			[
+				"re",
+				"requiredCheck  (variable)"
+			],
+			[
+				"reui",
+				"requiredRadio"
+			],
+			[
+				"requir",
+				"requiredText  (variable)"
+			],
+			[
+				"curre",
+				"currentElementStatus"
+			],
+			[
+				"radio",
+				"radioButtons"
+			],
+			[
+				"curren",
+				"currentElement"
+			],
+			[
+				"elemt",
+				"element_"
+			],
+			[
+				"reset",
+				"resetResultModal"
+			],
+			[
+				"acce",
+				"accessForm"
+			],
+			[
+				"acces",
+				"accessForm"
+			],
+			[
+				"update",
+				"updateTableCheck  (variable)"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"JSON",
+				"JSONObject"
+			],
+			[
+				"start",
+				"startJSONState"
+			],
+			[
+				"modal",
+				"modal_results_body"
+			],
+			[
+				"element",
+				"elementForm"
+			],
+			[
+				"elemen",
+				"elementForm  (variable)"
+			],
+			[
+				"formI",
+				"formID"
+			],
+			[
+				"formTa",
+				"formTableMetaSQL"
+			],
+			[
+				"encode",
+				"encodedData"
+			],
+			[
+				"expe",
+				"experimentalDataProbability"
+			],
+			[
+				"com",
+				"stringCompare"
+			],
+			[
+				"stin",
+				"string2"
+			],
+			[
+				"string",
+				"stringXBar"
+			],
+			[
+				"retur",
+				"returnX"
+			],
+			[
+				"get",
+				"genX  (function)"
+			],
+			[
+				"exper",
+				"experimentalProb"
+			],
+			[
+				"bir",
+				"binaryTree"
+			],
+			[
+				"tree",
+				"treeRoot"
+			],
+			[
+				"returnR",
+				"returnRight"
+			],
+			[
+				"element_",
+				"element_required"
+			],
+			[
+				"User",
+				"Users"
+			],
+			[
+				"user_level",
+				"user_level_lk"
+			],
+			[
+				"modal_",
+				"modal_confirmAdd"
+			],
+			[
+				"form_",
+				"form_AL"
+			],
+			[
+				"aja",
+				"ajax	$.ajax()"
+			],
+			[
+				"add",
+				"addUser"
+			],
+			[
+				"addUser",
+				"addUserButton"
+			],
+			[
+				"access",
+				"access_level"
+			],
+			[
+				"style",
+				"style	Tag"
+			],
+			[
+				"addIno",
+				"addInfo_error"
+			],
+			[
+				"addInfo",
+				"addInfo_error"
+			],
+			[
+				"getE",
+				"getElement"
+			],
+			[
+				"ty",
+				"type=  (attribute)"
+			],
+			[
+				"newEleme",
+				"newElementOption"
+			],
+			[
+				"addOp",
+				"addElementOption"
+			],
+			[
+				"elementopt",
+				"element_option"
+			],
+			[
+				"deleteEleme",
+				"deleteElementOption"
 			],
 			[
 				"required",
-				"requiredOption_"
+				"requiredOption1_"
 			],
 			[
-				"Desc",
-				"Description"
+				"eObj",
+				"elementObj"
 			],
 			[
-				"ID",
-				"id"
+				"getElemen",
+				"getElement"
 			],
 			[
-				"Element",
-				"elementHTML"
+				"jQuerparse",
+				"jQuery.parseJSON	jQuery.parseJSON"
+			],
+			[
+				"modal_re",
+				"modal_results_title"
+			],
+			[
+				"formT",
+				"formTableName  (variable)"
+			],
+			[
+				"elee",
+				"element_option"
+			],
+			[
+				"default",
+				"default_text"
+			],
+			[
+				"formTable",
+				"formTableName  (variable)"
+			],
+			[
+				"size",
+				"sizeof"
+			],
+			[
+				"late",
+				"latestFormID"
+			],
+			[
+				"onlc",
+				"onclick=  (attribute)"
+			],
+			[
+				"export",
+				"exportObj"
+			],
+			[
+				"unde",
+				"undefined"
+			],
+			[
+				"savin",
+				"savingCounter"
+			],
+			[
+				"sav",
+				"savingFrequency"
+			],
+			[
+				"dg",
+				"dg_write"
+			],
+			[
+				"current",
+				"current_user"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"append",
+				"appendTo	.appendTo()"
+			],
+			[
+				"edtio",
+				"editorName"
+			],
+			[
+				"usernam",
+				"formUsername"
+			],
+			[
+				"fade",
+				"fadeIn	.fadeIn()"
+			],
+			[
+				"val",
+				"validateForm"
+			],
+			[
+				"sele",
+				"selectCell"
 			],
 			[
 				"To",
-				"toText"
+				"TotalMines"
 			],
 			[
-				"newF",
-				"newFieldFunc"
+				"has",
+				"hasMine"
 			],
 			[
-				"font-s",
-				"font-size"
+				"print",
+				"printBoard"
+			],
+			[
+				"Mine",
+				"MineSweeper"
+			],
+			[
+				"game",
+				"game_deck"
+			],
+			[
+				"play",
+				"player_1"
+			],
+			[
+				"gma",
+				"game_deck"
+			],
+			[
+				"de",
+				"deck"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"inn",
+				"innerText"
+			],
+			[
+				"s",
+				"size	.size()"
+			],
+			[
+				"inner",
+				"innerHTML"
+			],
+			[
+				"c",
+				"currentID"
+			],
+			[
+				"Main",
+				"MainMenu"
+			],
+			[
+				"li",
+				"li	Tag"
+			],
+			[
+				"From",
+				"FromField"
+			],
+			[
+				"format",
+				"formated"
+			],
+			[
+				"picDat",
+				"pickDate1"
+			],
+			[
+				"Slide4Da",
+				"slide4DateT"
+			],
+			[
+				"slide",
+				"slide4Date"
+			],
+			[
+				"slide4D",
+				"slide4Desc"
+			],
+			[
+				"slid",
+				"slide4Date"
+			],
+			[
+				"slide4",
+				"slide4_date"
+			],
+			[
+				"U",
+				"TextUpdate"
+			],
+			[
+				"Previe",
+				"PreviewButton"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"url",
+				"URL"
+			],
+			[
+				"right",
+				"rightControl"
+			],
+			[
+				"newOFf",
+				"newOffsetText"
+			],
+			[
+				"circl",
+				"controlCircles"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "component/form/view.php",
 			"settings":
 			{
-				"buffer_size": 19205,
+				"buffer_size": 12275,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "component/form/create.php",
+			"file": "process_login.php",
 			"settings":
 			{
-				"buffer_size": 14708,
+				"buffer_size": 6143,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "css/createForm.css",
+			"file": "config.php",
 			"settings":
 			{
-				"buffer_size": 623,
+				"buffer_size": 3828,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Tasks.txt",
+			"file": "dashboard.php",
 			"settings":
 			{
-				"buffer_size": 260,
-				"line_ending": "Windows",
-				"name": "Finished"
+				"buffer_size": 2962,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "login.php",
+			"settings":
+			{
+				"buffer_size": 3599,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "component/form/formHTML.php",
+			"settings":
+			{
+				"buffer_size": 11831,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "component/form/processForm.php",
+			"settings":
+			{
+				"buffer_size": 9492,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "component/form/saveInfo.php",
+			"settings":
+			{
+				"buffer_size": 2801,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "component/form/edit.php",
+			"settings":
+			{
+				"buffer_size": 12862,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "component/form/processGuest.php",
+			"settings":
+			{
+				"buffer_size": 5559,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "component/form/formAccess.php",
+			"settings":
+			{
+				"buffer_size": 6587,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 196.0,
+		"height": 117.0,
 		"selected_items":
 		[
 			[
-				"java",
-				"Set Syntax: JavaScript"
-			],
-			[
-				"HTML",
-				"Set Syntax: HTML"
-			],
-			[
-				"JavaS",
-				"Set Syntax: JavaScript"
+				"php",
+				"Set Syntax: PHP"
 			],
 			[
 				"html",
 				"Set Syntax: HTML"
 			],
 			[
-				"CIE",
-				"Snippet: CIE-dashboard"
-			],
-			[
-				"Snippet: CIE",
-				"Snippet: CIE-dashboard"
-			],
-			[
-				"Snippet: dash",
-				"Snippet: CIE-dashboard"
-			],
-			[
-				"php",
-				"Set Syntax: PHP"
-			],
-			[
 				"package",
-				"Package Control: Discover Packages"
+				"Package Control: Upgrade Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"packakge",
+				"Package Control: Enable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"bracket",
+				"BracketHighlighter: Toggle High Visibility Mode"
+			],
+			[
+				"bracker",
+				"BracketHighlighter: Toggle High Visibility Mode"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
 			],
 			[
 				"instal",
 				"Package Control: Install Package"
 			],
 			[
-				"packa",
+				"packagage",
 				"Package Control: Install Package"
+			],
+			[
+				"Linter",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"linter deb",
+				"SublimeLinter: Enable Debug Mode"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"sublimelinter",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"SublimeLinter",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"SublimeLInter",
+				"SublimeLinter: Enable Debug Mode"
+			],
+			[
+				"toggle",
+				"Toggle Comment"
+			],
+			[
+				"mode",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"Javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"HTML",
+				"Set Syntax: HTML"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"packag",
+				"Package Control: List Packages"
+			],
+			[
+				"discover",
+				"Package Control: Discover Packages"
+			],
+			[
+				"matla",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
 			]
 		],
-		"width": 536.0
+		"width": 472.0
 	},
 	"console":
 	{
-		"height": 126.0,
+		"height": 335.0,
 		"history":
 		[
 			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
@@ -301,40 +772,145 @@
 	},
 	"file_history":
 	[
-		"/C/wamp/www/CIE/JavaScript/formCreate.js",
-		"/C/Users/cc774/Desktop/Dev_Environment/Sublime/Data/Packages/User/JavaScript.sublime-settings",
-		"/C/wamp/www/CIE/dashboard.php",
-		"/C/wamp/www/CIE/affix.html",
-		"/C/wamp/www/CIE/component/form/create.php",
-		"/C/wamp/www/CIE/component/form/index.php",
-		"/C/wamp/www/CIE/component/data/index.php",
-		"/C/wamp/www/CIE/component/dashboard/index.php",
-		"/C/wamp/www/CIE/css/createForm.css",
-		"/C/wamp/www/CIE/css/main.css",
-		"/C/Users/cc774/Desktop/Dev_Environment/Sublime/Data/Packages/User/CIE-dashboard.sublime-snippet",
-		"/C/wamp/www/CIE/config.php",
+		"/C/wamp/data/localweb/CIE/dashboard.php",
+		"/C/wamp/data/localweb/CIE/component/form/publishForm.php",
+		"/C/wamp/data/localweb/CIE/js/form/editor-gui.js",
+		"/C/wamp/data/localweb/CIE/component/form/create.php",
+		"/C/Program Files (x86)/MySQL/MySQL Utilities/output.txt",
 		"/C/wamp/www/CIE/process_login.php",
-		"/C/Users/cc774/Desktop/Dev_Environment/Sublime/Data/Packages/User/Distraction Free.sublime-settings",
-		"/C/wamp/www/CIE/component/dashboard/poop.php",
+		"/C/wamp/modules/phpmyadmin414x140402145533/config.inc.php",
+		"/C/wamp/modules/phpmyadmin4112x140331233007/config.inc.php",
+		"/C/wamp/www/CIE/.gitignore",
+		"/C/wamp/data/localweb/soar/application/config/config.php",
+		"/C/Users/Charles/Desktop/config.inc.php",
+		"/C/wamp/bin/mysql/mysql5.5.24/data/cie/db.opt",
+		"/C/wamp/bin/mysql/mysql5.5.24/data/cie/user_level_lk.frm",
+		"/C/wamp/www/CIE/_ASSETS/Excel/Examples/01simple.php",
+		"/C/wamp/www/CIE/component/form/view.php",
+		"/C/wamp/www/CIE/component/form/saveInfo.php",
+		"/C/wamp/www/CIE/component/form/edit.php",
+		"/C/wamp/www/CIE/component/data/index.php",
+		"/C/wamp/www/CIE/component/data/view.php",
+		"/C/wamp/www/CIE/component/form/manage.php",
+		"/C/wamp/www/CIE/component/form/formHTML.php",
+		"/C/wamp/www/CIE/component/form/formSubmitted.php",
+		"/C/wamp/www/CIE/component/form/processForm.php",
+		"/C/wamp/www/CIE/testiFrame.html",
+		"/C/wamp/www/CIE/js/form/editor-gui.js",
+		"/C/wamp/www/CIE/component/form/create.php",
+		"/C/wamp/www/CIE/dashboard.php",
+		"/C/wamp/www/CIE/component/form/index.php",
+		"/C/wamp/www/CIE/component/user/index.php",
+		"/C/wamp/www/CIE/component/user/manageUser.php",
+		"/C/wamp/www/CIE/component/form/deleteForm.php",
+		"/C/wamp/www/CIE/_ASSETS/databaseState.sql",
+		"/C/wamp/www/CIE/component/form/publishForm.php",
+		"/C/wamp/www/CIE/Tasks.txt",
+		"/C/wamp/www/CIE/config.php",
+		"/C/wamp/www/Daily Go/CSTE/js/core.js",
+		"/C/wamp/www/Daily Go/CSTE/index.php",
+		"/C/wamp/www/CIE/css/form/createForm.css",
+		"/C/wamp/www/CIE/index.html",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/libs/codeintel2/lang_html.py",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/libs/codeintel2/lang_php.py",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/C/wamp/www/CIE/login.php",
-		"/H/CIE/Online/index.html",
-		"/C/wamp/www/wwwsqldesigner-2.7/backend/php-mysql/index.php",
-		"/C/wamp/www/wwwsqldesigner-2.7/README",
-		"/C/wamp/www/CIE/_ASSETS/database.xml",
+		"/C/wamp/www/CIE/_ASSETS/Sample JSON Objects.txt",
+		"/C/Users/Charles/Desktop/NAU/Spring 2014/EE 490/Project 1/project1.py",
+		"/C/Users/Charles/Desktop/NAU/Spring 2014/EE 490/Project 1/binaryTree",
+		"/C/wamp/www/CIE/index.php",
+		"/C/wamp/www/CIE/component/user/addUser.php",
+		"/C/Users/Charles/Desktop/Installation-Public/README",
+		"/C/wamp/www/CIE/css/main.css",
+		"/C/wamp/www/CIE/logout.php",
+		"/C/wamp/www/CIE/component/dashboard/index.php",
+		"/C/wamp/www/CIE/css/tables.css",
+		"/C/wamp/www/CIE/test.html",
+		"/C/wamp/www/CIE/tableTest.html",
+		"/C/wamp/www/CIE/js/scripts.js",
+		"/C/wamp/www/CIE/js/fuelux-master/index.html",
+		"/C/wamp/www/CIE/js/fuelux-master/sample/data.js",
+		"/C/wamp/www/CIE/js/fuelux-master/sample/datasource.js",
+		"/C/wamp/www/CIE/_ASSETS/database.txt",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/wamp/www/CIE/css/createForm.css",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/wamp/www/CIE/CIE.sublime-project",
+		"/C/wamp/www/CIE/JavaScript/jquery-ui-1.10.3.custom/development-bundle/demos/accordion/custom-icons.html",
 		"/C/wamp/www/CIE/serviceValidate.xml",
-		"/H/CIE/Online/JSTest.html",
-		"/C/Users/cc774/Desktop/Dev_Environment/Online/index.html",
-		"/H/CIE/Online/JavaScript/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"
+		"/C/wamp/www/CIE/JavaScript/jquery-ui-1.10.3.custom/development-bundle/demos/draggable/visual-feedback.html",
+		"/C/wamp/www/CIE/JavaScript/jquery-ui-1.10.3.custom/development-bundle/demos/tooltip/video-player.html",
+		"/C/dev/php-5.5.8/pear/install-pear.txt",
+		"/C/wamp/www/PEAR/pearcmd.php",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/User/HTML.sublime-settings",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Charles/Desktop/NAU/Grading/CS 126/Lab1.py",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Installed Packages/SublimeLinter-jshint.sublime-package",
+		"/C/wamp/www/CIE/JavaScript/jquery-ui-1.10.3.custom/development-bundle/demos/datepicker/inline.html",
+		"/C/wamp/www/CIE/JavaScript/jquery-ui-1.10.3.custom/development-bundle/MIT-LICENSE.txt",
+		"/C/wamp/www/CIE/JavaScript/scripts.js",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter3/linter-plugin-template/README.md",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter3/lint/highlight.py",
+		"/C/Users/Charles/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/README.md",
+		"/C/Program Files/Sublime Text 3/Daily Go.sublime-project",
+		"/C/wamp/www/Daily Go/CSTE/js/bootstrap-datepicker.js",
+		"/C/wamp/www/Daily Go/CSTE/main.css",
+		"/C/wamp/www/Daily Go/CSTE/testScroll/jquery.mCustomScrollbar.css",
+		"/C/wamp/www/Daily Go/CSTE/testScroll/test.html",
+		"/C/wamp/www/Daily Go/CSTE/testPHP.php",
+		"/C/wamp/www/Daily Go/CSTE/js/bootstrap/js/bootstrap.min.js",
+		"/C/wamp/www/Daily Go/CSTE/testScroll/infinite_scroll_example.html",
+		"/C/wamp/www/Daily Go/Server/API/prototype/0.1/static/index.html",
+		"/C/wamp/www/Daily Go/CSTE/js/CSTEConcerns.txt",
+		"/C/wamp/www/Daily Go/Server/API/prototype/0.1/static/test.html",
+		"/C/wamp/www/Daily Go/Server/API/prototype/0.1/static/serve.html",
+		"/C/wamp/www/Daily Go/Server/API/prototype/0.1/api.py",
+		"/C/wamp/www/Daily Go/CSTE/login_process.php",
+		"/C/wamp/www/Daily Go/Server/API/prototype/0.1/api-py/Lib/site-packages/flask_login.py",
+		"/C/wamp/www/Daily Go/Server/API/prototype/0.1/static/test2.html",
+		"/C/wamp/www/Daily Go/CSTE/indexs.php",
+		"/C/wamp/www/Daily Go/CSTE/bootstrap-wysiwyg-master/README.md",
+		"/C/wamp/www/Daily Go/CSTE/bootstrap-wysiwyg-master/index.css",
+		"/C/wamp/www/Daily Go/CSTE/bootstrap-wysiwyg-master/external/jquery.hotkeys.js",
+		"/C/wamp/www/Daily Go/CSTE/test.html",
+		"/C/wamp/www/Daily Go/CSTE/bootstrap-wysiwyg-master/bootstrap-wysiwyg.js",
+		"/C/wamp/www/Daily Go/CSTE/bootstrap-wysiwyg-master/index.html",
+		"/C/wamp/www/Daily Go/CSTE/login.php",
+		"/C/wamp/www/Daily Go/CSTE/config.php",
+		"/C/wamp/bin/apache/apache2.2.22/bin/php.ini",
+		"/C/wamp/www/Daily Go/CSTE/API Suggestions.txt",
+		"/C/wamp/www/Daily Go/Server/API/pax_global_header",
+		"/C/Users/Charles/Desktop/Tunlr",
+		"/C/Users/Charles/Desktop/set tunlr DNS.bat",
+		"/C/Users/Charles/Desktop/set auto DNS.bat",
+		"/C/wamp/www/Daily Go/Server/prototype/0.1/api.py",
+		"/C/Users/Charles/Desktop/Match/Match.jsproj",
+		"/C/Users/Charles/Desktop/NAU/Grading/CS 126/Minesweep.py",
+		"/C/wamp/www/Work/Online/layout.php",
+		"/C/wamp/www/Work/Online/index.html",
+		"/C/Users/Charles/Desktop/NAU/Grading/CS 126/Lab9-21.py",
+		"/C/wamp/www/ACM_TV/turtle.php",
+		"/C/wamp/www/Daily Go/index.php",
+		"/C/wamp/www/ccweb_landing/index.php",
+		"/C/wamp/www/Capstone/index.php",
+		"/C/wamp/www/Daily Go/CSTE/ckeditor/contents.css",
+		"/C/wamp/www/Daily Go/CSTE/Test.css",
+		"/C/wamp/www/Daily Go/CSTE/ckeditor/Test.css",
+		"/C/wamp/www/Daily Go/CSTE/js/jquery-1.10.2.min.js",
+		"/C/wamp/www/Daily Go/CSTE/js/datepicker/js/bootstrap-datepicker.js"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
 		"height": 90.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -342,65 +918,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"append(",
-			"elementEmptyError",
-			" ",
-			"elementName_",
+			"value",
+			"[i",
+			"echo",
+			"reuqestType",
+			"requestType",
+			"reuqestType",
+			"publishedStatus",
+			"published",
+			"checkSession",
+			"titlebar",
+			"_BLANK",
+			"protectedFirn",
+			"h3",
+			"dashboardURL",
+			"FROM session",
+			"session",
+			"from",
+			"select",
 			"\"",
-			"elementName_",
-			"element",
-			"elementName_",
-			"deleteElementOption_",
-			"addElementOption",
-			"id=\\\"deleteElement",
-			"deleteElement",
-			"Stuff",
-			"nav",
-			"\"",
-			"type=\"button\"",
-			"button",
-			"?",
-			"name",
-			"h1",
-			"d",
-			"case 'tnr':\n						$errorText = \"The ticket provided was not recognized. Try to log in again.\";\n						break;",
-			"    ->   ",
-			"\\P",
-			"\\PDO",
-			".2",
-			".3",
-			"3",
+			"<br>",
+			"Manage Access",
+			"tr>",
+			"tr",
+			"columnName",
+			"masterform",
+			"sizeof",
+			"currentElement",
+			"unlinked",
+			"_GET",
+			"modal(\"loading",
+			"var",
+			"Forbidden",
+			"$_GET['msg']",
+			"saveForm",
+			"updateForm",
 			"h2",
-			"rgba",
-			"i",
-			"ticket",
-			"\"+element.id+\"",
-			"\\\"",
-			" \\",
-			"elementAction",
-			"document.getElementById(\"elementTitle_\"+elementID)",
-			"doument",
-			"updateElement",
-			"\"",
-			"fieldName_",
-			"=",
-			"\",\n",
-			"formElement",
-			"elemInElem",
-			"<button",
+			"td",
+			"element",
+			">\n",
+			"h2",
+			"html",
+			"site_queryCIE",
+			"formMetaInfo",
+			"queryString",
+			"metaForm",
+			"createFormTable",
+			"3515224211113213112132212314443131422131333511122411145413231421221211225231212321212643513223121421",
+			",",
+			"string",
+			"returnX",
+			"# ",
+			"#",
+			"sequenceEncoding",
+			" string",
+			"string",
+			" string",
+			"String",
+			"string",
+			"binaryTreeRoot",
+			"())",
+			"binaryTree",
+			"returnRight",
+			"returnLeft",
+			"right",
+			"symbol",
+			"h3",
 			"button",
-			"elemType",
-			"lg",
-			"Add",
-			"Add<br>",
-			"paddig",
-			"border",
-			"silver",
-			"Create new",
-			"div style=\"border",
-			"<span class=\"noDrag\">",
-			"Element",
-			"formElem"
+			"\"",
+			"DANA",
+			"h2",
+			"testImg",
+			"			</tr>\n",
+			"td",
+			"Test",
+			"formName",
+			"dataObject",
+			"formObject",
+			"dataObject",
+			"formObject",
+			"form_name",
+			"form_description",
+			"\\",
+			"		\n",
+			"\\",
+			"main",
+			"addElementOption_",
+			"inputEmail3",
+			"loadEleme",
+			"pointer",
+			"loadElement",
+			"main",
+			"var",
+			"))\n",
+			"(2^(-1)+2^(-2)+2^(-3)+2^(-3)+2^(-4)+2^(-4))",
+			"log2",
+			"+",
+			"log2",
+			"JavaScript",
+			"JavaScript/jquery-ui-1.10.3.custom/",
+			"/JavaScript/bootstrap/",
+			"/JavaScript/jquery-ui-1.10.3.custom/j",
+			"visual_modal_loading",
+			"echo",
+			".\n",
+			"20",
+			", \"",
+			"<br>",
+			"option",
+			"element",
+			"break;",
+			"currentElement.type",
+			"\"+element.id+\"",
+			"\\",
+			"\"",
+			"myModal",
+			"p",
+			"h4",
+			"h2",
+			"\">",
+			"addClass",
+			"\">",
+			"<br>",
+			"parseTicket",
+			"				<div class=\"option\" style=\"border: 1px solid white; padding: 2px 4px; margin: 0 0 3px 0;\">11/12/13</div>\n				<div class=\"option\" style=\"border: 1px solid white; padding: 2px 4px; margin: 0 0 3px 0;\">11/12/13</div>\n				<div class=\"option\" style=\"border: 1px solid white; padding: 2px 4px; margin: 0 0 3px 0;\">11/12/13</div>\n				<div class=\"option\" style=\"border: 1px solid white; padding: 2px 4px; margin: 0 0 3px 0;\">11/12/13</div>\n				<div class=\"option\" style=\"border: 1px solid white; padding: 2px 4px; margin: 0 0 3px 0;\">11/12/13</div>\n				<div class=\"option\" style=\"border: 1px solid white; padding: 2px 4px; margin: 0 0 3px 0;\">11/12/13</div>\n				<div class=\"option\" style=\"border: 1px solid white; padding: 2px 4px; margin: 0 0 3px 0;\">11/12/13</div>\n				<div class=\"option\" style=\"border: 1px solid white; padding: 2px 4px; margin: 0 0 3px 0;\">11/12/13</div>",
+			"25",
+			"style",
+			"span",
+			"style"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -418,160 +1063,72 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 10,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "component/form/view.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19205,
+						"buffer_size": 12275,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2577,
-								2577
+								5561,
+								5561
 							]
 						],
 						"settings":
 						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
+							"BracketHighlighterBusy": false,
+							"bh_regions":
 							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
 							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 672.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "component/form/create.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14708,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6,
-								0
-							]
-						],
-						"settings":
-						{
 							"codeintel": true,
 							"codeintel_config":
 							{
@@ -680,30 +1237,148 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 405.0,
+						"translation.y": 2301.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "css/createForm.css",
+					"buffer": 1,
+					"file": "process_login.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 623,
+						"buffer_size": 6143,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25,
-								25
+								1499,
+								1499
 							]
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 1297.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3828,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3824,
+								3670
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
 							"codeintel": true,
 							"codeintel_config":
 							{
@@ -808,35 +1483,579 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1056.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "dashboard.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2254,
+								2266
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 407.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "login.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3599,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2807,
+								2807
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1542.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "component/form/formHTML.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2827,
+								2827
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 739.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "component/form/processForm.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								562,
+								283
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Tasks.txt",
+					"buffer": 7,
+					"file": "component/form/saveInfo.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 260,
+						"buffer_size": 2801,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								260,
-								260
+								1140,
+								1140
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Finished",
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
 							"codeintel": true,
 							"codeintel_config":
 							{
@@ -941,12 +2160,440 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 357.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "component/form/edit.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12862,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4793.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "component/form/processGuest.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2371,
+								2384
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 786.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "component/form/formAccess.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5984,
+								5984
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2103.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -954,7 +2601,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -983,10 +2630,18 @@
 		]
 	},
 	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 242.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
 	"project": "CIE.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -995,36 +2650,40 @@
 		"selected_items":
 		[
 			[
-				"inde",
-				"index.html"
+				"confi",
+				"config.php"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"C:\\Program Files\\Sublime Text 3\\CIE.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 392.0,
+		"height": 400.0,
 		"selected_items":
 		[
 		],
-		"width": 392.0
+		"width": 400.0
 	},
 	"settings":
 	{
 	},
 	"show_minimap": false,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 265.0,
+	"side_bar_width": 168.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

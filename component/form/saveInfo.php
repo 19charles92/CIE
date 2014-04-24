@@ -34,6 +34,12 @@ $publishedStatus	= site_queryCIE("SELECT published FROM masterform WHERE form_id
 $metaInfo			= site_queryCIE("SELECT * FROM ".$formID."_meta","query");
 $getData			= [];
 
+// If the form hasn't been published, then don't accept any data.
+if( $publishedStatus == "n" ){
+	echo '<h1>Sorry, this form cannot accept any data at this time.</h1>';
+	die();
+}
+
 // We need to take the information from each element from the form and store it into our data array.
 // We are going to assume that if a element is missing, that it is an empty string.
 for ($i=1; $i <= sizeof($metaInfo) ; $i++) { 

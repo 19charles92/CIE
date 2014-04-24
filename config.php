@@ -100,6 +100,9 @@ function isLoggedIn( $URL ){
 	}
 }
 
+// Set the timezone
+date_default_timezone_set('America/Phoenix');
+
 // Some Housekeeping...
 
 // SESSION===========================================
