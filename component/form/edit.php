@@ -65,6 +65,11 @@ class Dashboard
 		$tempCounter = 0;
 		foreach ($formMetaInfo as $element) {
 			
+			// Skip any element that has a _::DANA element name
+			if( $element->element_name == "_::DANA" ){
+				continue;
+			}
+
 			// Add Item ID
 			$JSONObject .= '"'.$tempCounter.'":';
 

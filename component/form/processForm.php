@@ -127,6 +127,8 @@ if( isset( $_POST['update'] ) ){
 	$updateTask = "";
 }
 
+$restrictedCondition = "";
+
 // If there is an update available, make sure the form exists
 // If it does exists, then drop both the current form AND the meta form
 if( $updateTask == "true" ){
@@ -148,6 +150,17 @@ if( $updateTask == "true" ){
 
 			if( $updateTableCheck[0]->DANA == $userObj->DANA ){
 				// Only the owner can edit a file
+
+				// We need to make sure that table isn't restricted. If it is, save the current list and notify the program.
+				$restrictedCheck = site_queryCIE("SELECT restriction FROM masterform WHERE form_id=?",[$formToUpdate]);
+				$restrictedCheck = $restrictedCheck[0]->restriction;
+				
+
+				// If the restriction column isn't empty, then save whatever is in there.
+				if( !empty($restrictedCheck) ){
+					$restrictedConditiones = $restrictedCheck;
+				}
+
 				// Let's drop 'em!
 				$queryString = "DROP TABLE ".$formToUpdate.", ".$formToUpdate."_meta";
 				site_queryCIE($queryString,"query");
@@ -162,8 +175,6 @@ if( $updateTask == "true" ){
 		}
 	}
 }
-
-
 
 // =========
 // ========= Create table for storage.
@@ -274,6 +285,11 @@ $DANA = $userObj->DANA;
 // Also, create a temp name for this table.
 $masterformSQL = "INSERT INTO masterform (DANA, form_id, created, form_id_meta, published,form_name,form_description) VALUES('".$DANA."','".$formTableName."','".time()."','".$formTableName."_meta','n','".$formName."','".$formDescription."')";
 site_queryCIE($masterformSQL,"query");
+
+// Now we have to make sure we insert the data for the restriction if there one...
+// if( $restrictedCheck !== "" ){
+// 	exec("php ")
+// }
 
 // All information is recorder, return the form ID.
 header("HTTP/1.0 201 Created");
