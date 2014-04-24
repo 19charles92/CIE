@@ -68,15 +68,57 @@ class Dashboard
 		// Assign a default button
 		$formOptions[0] = '<a href="?path=form/edit&id='.$formID.'" class="btn btn-success"> Edit Form </a>';
 
+		// Also decide the functionality for the formAccess button
+		$formAccessButton = "";
+
 		if( $currentForm->published == "y" ){
 			// Form has been published
 			$formOptions[0] = '<a href="#" class="btn btn-success" disabled="disabled"> Edit Form </a>';
 			$formOptions[1] = '<button class="btn btn-primary" onclick="viewCode()">View Code</button>';
 			$formOptions[2] = '<button class="btn btn-warning" onclick="deleteRequest(\'Unlink\')"> Unlink Form </button>';
+			$formAccessButton = '<button class="btn btn-success" disabled="disabled"> Enable </button>';
 		} else {
 			// Form hasn't been published
 			$formOptions[1] = '<button class="btn btn-primary" onclick="publishForm()">Publish Form</button>';
 			$formOptions[2] = '<button class="btn btn-danger" onclick="deleteRequest(\'Delete\')"> Delete Form </button>';
+			$formAccessButton = '<button class="btn btn-success" onclick="formAccessToggle()"> Enable </button>';
+		}
+
+		// If there is no restriction, show the option to enable the option form.
+		if(  $currentForm->restriction == "" ){
+			// No restriction, show the option of enabling form access
+			if( $currentForm->published == "y" ){
+				// If the form has been published, then tell the user that they can no longer enable this feature.
+				$formAccessMessage = "This form has been published, so this feature is no longer available.<br><br> If you need this form to be restricted, then create a new form based of this one and enable form access before publishing.";
+				$formAccessMessage .= "<br><br>".$formAccessButton;
+			} else {
+				// The form has not been published, so just show the default message.
+				$formAccessMessage = 'You can force this form to only be accessible by the users you specify.<br><br>To enable this feature, just hit "enable" below. This feature can only be enabled <span style="font-weight: bold;">BEFORE</span> a form is published. <br><br>Once enabled, you will always be able to change the access of the form. This includes adding and removing DANAs to the allowed list.<br><br>Enabling this feature will prompt users to sign in through CAS before being allowed to view the form. The user\'s DANA ID will then be associated with their individual submission.';
+				$formAccessMessage .= "<br><br>".$formAccessButton;
+			}
+		} else {
+			// There is a restriction, so show the option to modify users allowed.
+
+			// Let's make the current restriction list look like regular user input.
+			$currentAccessList = str_replace("[", "", $currentForm->restriction);
+			$currentAccessList = str_replace("]", "", $currentAccessList);
+
+			// Updating access to form
+			$formAccessMessage = "<h4> Edit access to form </h4>";
+			$formAccessMessage .= "You can edit the list of people who can access the form below. <br><br> If you leave this field empty, then anyone can access this form, but they have to log in through the CAS system first.";
+			$formAccessMessage .= '<br><br><span style="font-weight: bold;">To add DANAs to the list of allowed users, just add the DANA to the input box below. Separate each DANA with a comma.</span>';
+			$formAccessMessage .= '<br><br><div class="form-group"><label for="newList" class="control-label col-md-2">Access List</label><div class="col-md-10"><input type="text" class="form-control" id="newList" value="'.$currentAccessList.'" placeholder="abc3,ac21,cds87"></div></div><br><br>';
+			$formAccessMessage .= '<div class="form-group"><div class="col-md-4 pull-right"><input type="submit" class="form-control btn-primary" value="Update Access List" onclick="formAccessUpdateList()"></div></div>';
+
+			if( $currentForm->published == "y" ){
+
+			} else {
+				// Toggling access to form
+				$formAccessMessage .= '<br>';
+				$formAccessMessage .= '<h4>Turn off form access</h4>';
+				$formAccessMessage .= 'Turn off form access. This will remove the requirement that users must log in before accessing the form. It will also <strong>REMOVE</strong> any current access list, so be sure to save it before turning off this feature. ';
+				$formAccessMessage .= '<br><br><button class="btn btn-danger" onclick="formAccessToggle()"> Turn Off Form Access </button>';
+			}
 		}
 
 		?>
@@ -115,6 +157,34 @@ if( $errorMsg == "10" ){
 		<strong>Warning!</strong> The form could not be published. Please try again. If this issue continues, contact an administrator.
 	</div>
 	<?php 
+} elseif ( $errorMsg == "20" ) {
+	?>
+	<div class="alert alert-success alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		Form Access Changed. Scroll to the bottom to change form access settings.
+	</div>
+	<?php
+} elseif ( $errorMsg == "21" ) {
+	?>
+	<div class="alert alert-warning alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<strong>Warning!</strong> Form access feature could not be changed. Please try again. If this issue continues, contact an administrator.
+	</div>
+	<?php
+} elseif ( $errorMsg == "22" ) {
+	?>
+	<div class="alert alert-success alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		Form Access Changed. The access list has been updated.
+	</div>
+	<?php
+} elseif ( $errorMsg == "23" ) {
+	?>
+	<div class="alert alert-warning alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<strong>Warning!</strong> Form access feature could not be edited. Please try again. If this issue continues, contact an administrator.
+	</div>
+	<?php
 }
 ?>
 
@@ -167,13 +237,7 @@ if( $errorMsg == "10" ){
 <div class="panel panel-default">
 	<div class="panel-heading">Form Access</div>
 	<div class="panel-body">
-		<p>
-			You can force this form to only be accessible by the users you specify.<br><br>
-			To enable this feature, just hit "enable" below. This feature can only be enabled <span style="font-weight: bold;">BEFORE</span> a form is published. <br><br>
-			Once enabled, you will always be able to change the access of the form. This includes adding and removing DANAs to the allowed list.<br><br>
-			Enabling this feature will prompt users to sign in through CAS before being allowed to view the form. The user's DANA ID will then be associated with their individual submission.
-			</p>
-		<button class="btn btn-success" onclick="enableFormAccess()"> Enable </button>
+		<?php echo $formAccessMessage ?>
 	</div>
 </div>
 
@@ -213,7 +277,37 @@ function resetResultModal(){
 
 }
 
-// This function will display a prompt for the user to enable 
+// This function will toggle the form access between on and off
+function formAccessToggle(){
+	$.ajax({
+			url: '/CIE/component/form/formAccess.php',
+			type: 'GET',
+			dataType: 'text',
+			data: {requestForm:'<?php echo $formID ?>',requestType:'toggle'},
+		})
+		.done(function( result ) {
+			window.location.href = "?path=form/view&id=<?php echo $formID ?>&msg=20";
+		})
+		.fail(function( result ) {
+			window.location.href = "?path=form/view&id=<?php echo $formID ?>&msg=21";
+		})
+}
+
+// This function will toggle the form access between on and off
+function formAccessUpdateList(){
+	$.ajax({
+			url: '/CIE/component/form/formAccess.php',
+			type: 'GET',
+			dataType: 'text',
+			data: {requestForm:'<?php echo $formID ?>',requestType:'modify',newList:document.getElementById('newList').value},
+		})
+		.done(function( result ) {
+			window.location.href = "?path=form/view&id=<?php echo $formID ?>&msg=22";
+		})
+		.fail(function( result ) {
+			window.location.href = "?path=form/view&id=<?php echo $formID ?>&msg=23";
+		})
+}
 
 // Will show the HTML preview of the current form in the results modal.
 function showHTMLPreview(){

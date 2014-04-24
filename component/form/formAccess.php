@@ -137,6 +137,19 @@ if( $requestType == "toggle" ){
 // Process:
 // 	* Take the newList parameter and insert it over the existing list in masterform
 if( $requestType == "modify" ){
+
+	// The restriction column can only be changed if the current form has form access enabled.
+	// To determine this, we can say that if the form currently has an empty restriction column, then it does not have form access enabled.
+	// Thus, we should cancel the operation.
+	$formCurrentStatus = site_queryCIE("SELECT restriction FROM masterform WHERE form_id=?",[$requestForm]);
+
+	if( $formCurrentStatus[0]->restriction == "" ){
+		// The form does NOT have form access enabled, kill the script.
+		header("HTTP/1.0 400 Bad Request");
+		echo "<h1>400 Bad Request</h1>Cannot complete this request.";
+		die();
+	}
+
 	// Identify the new list of names
 	if( isset($_GET['newList']) ){
 		// Save the parameter to a variable

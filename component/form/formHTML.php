@@ -70,9 +70,31 @@ if( !empty($restrictedCheck) && $iframe == "true" ){
 			<?php
 			die();
 		} else {
+			// Now we have to check to see if the user is in the approved list.
+			// var_dump($restrictedCheck);
+
+			// Save the user's DANA so it can be used later...
 			$sessionExpires = $checkSession[0]->expires;
 			$authentication_dana = $checkSession[0]->DANA;
-			// Save the user's DANA so it can be used later...
+
+			// Check to see whether this form only allows specific number of users.
+			if( $restrictedCheck == "[]" ){
+				// This form does not require a specific DANA to view the form. Continue with processing.
+			} else {
+				// Only specific DANAs are allowed.
+				// First let's create an array of the DANAs allowed
+				$restrictedList = explode(",", str_replace("[", "", str_replace("]","", strtolower($restrictedCheck) ) ) );
+				if( in_array(strtolower($authentication_dana), $restrictedList) ){
+					// We're good!
+				} else {
+					?>
+					<h2>Sorry, you don't have access to view this form.</h2>
+					<?php
+					die();
+				}
+			}
+
+
 			// Tell the user what DANA they are logged in under.
 			$danaAlert = "You are currently accessing a form that requires authentication. Your are filling out this form under <strong>".$authentication_dana."</strong>. If this is not your DANA, please close your browser and navigate back to this page. <br><br> There is a 2 hour limit on your session. Please complete this form before <strong>".date("F jS \a\t g:ia",$sessionExpires)."</strong>";
 		}
@@ -160,6 +182,11 @@ $requiredRadio = [];
 $requiredCheck = [];
 
 foreach ($formData as $elementForm ) {
+
+	// We have to make sure we skip the _::DANA element
+	if( $elementForm->element_name == "_::DANA"){
+		continue;
+	}
 
 	// Variable that will display the input for the elementFor
 	$formInput = "";

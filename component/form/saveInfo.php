@@ -68,6 +68,12 @@ $queryString = "INSERT INTO ".$formID." VALUES(";
 
 // From here, we want to make sure that any fields that are required are filled out, if they're not, then deny the request.
 foreach ($metaInfo as $key => $formElement) {
+
+	// We have to make sure we skip the _::DANA element
+	if( $elementForm->element_name == "_::DANA"){
+		continue;
+	}
+	
 	// Check to see if a required field is empty
 	if( $formElement->element_required == "yes"){
 		// This element is required., so make sure the getData at the index is correct...
